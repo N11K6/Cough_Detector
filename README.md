@@ -28,6 +28,7 @@ Training results have been giving a validation accuracy of 98% percent, and thus
 
 * **Notebooks :** Contains the *.ipbynb* notebooks that outline the process and methodology behind assembling the dataset and training the model.
 * **audio_files :** Is the directory where any audio files that can be used to demonstrate the model are stored. 
+* **demo_video :** Contains a short screen capture video of the detection system in deployment.
 * **images :** Contains images and schematics for presentation.
 * **trained_models :** Contains the trained models saved in *.h5* format.
 * **training_mfccs :** Contains a number of extracted MFCCs that can be used to run the code and train the model.
