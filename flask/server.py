@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Mar  2 18:36:37 2021
+Server for a Flask API implementation of the cough detection model.
 
 @author: nk
 """
@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 @app.route("/", methods = ["POST"])
 
-def denoise():
+def identify():
     
     # get audio file and save it:
     audio_file = request.files["file"] # request file
