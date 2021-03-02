@@ -15,6 +15,12 @@ PATH_TO_AUDIO = "./audio_files/audio_test_7s.wav"
 
 #%%
 def present_results(outcomes):
+    '''
+    Prints out the results in a tidy format.
+    args:
+        outcomes (list) : list of predictions (0 or 1) corresponding to either
+                         a cough event or a non-cough related event.
+    '''
     # Count number of positives detected:
     total = len(outcomes)
     positives = 0
