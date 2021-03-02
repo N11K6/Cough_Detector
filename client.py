@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Tue Mar  2 18:31:19 2021
+Client to be used for a Flask API implementation of the cough detection model.
 
 @author: nk
 """
