@@ -29,7 +29,7 @@ Training results have been giving a validation accuracy of 98% percent, and thus
 * *Notebooks* : Contains the *.ipbynb* notebooks that outline the process and methodology behind assembling the dataset and training the model.
 * *audio_files* : Is the directory where any audio files that can be used to demonstrate the model are stored. 
 * *demo_video* : Contains a short screen capture video of the detection system in deployment.
-* *flask* : Directory with code necessary to run a Flask API implementation of the cough detection system. Includes server, cough detector class/object, and trained model.
+* *Deploy_w_Flask* : Contains the necessary code and the client script to deploy the cough detector on Docker with NGINX, using the Flask API. Note that any audio files used in the example are still called from the *audio_files* directory.
 * *images* : Contains images and schematics for presentation.
 * *trained_models* : Contains the trained models saved in *.h5* format.
 * *training_mfccs* : Contains a number of extracted MFCCs that can be used to run the code and train the model.
@@ -37,4 +37,3 @@ Training results have been giving a validation accuracy of 98% percent, and thus
 * **train.py** : Is the training pipeline used to build and train the model from the available audio files.
 * **train_from_mfccs.py** : Is an alternative training pipeline that can be used with the MFCCs stored in the **training_mfccs** directory. Features are directly loaded and the model is built and trained without the need to have the audio files stored.
 * **trained_model_demo.py** : Is a program for a brief demonstration of the model, using an input audio file to detect coughing events.
-* **client.py** : Client script for Flask API implementation of the cough detection system. With **server.py** running (found in *flask* directory), the client can be called from the shell to identify events in an audio file.
