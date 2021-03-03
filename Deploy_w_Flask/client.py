@@ -11,7 +11,7 @@ import requests
 
 #%%
 URL = "http://127.0.0.1/"
-PATH_TO_AUDIO = "audio_test_7s.wav"
+PATH_TO_AUDIO = "../audio_files/audio_test_7s.wav"
 
 #%%
 def present_results(outcomes):
