@@ -29,7 +29,7 @@ from pydub.silence import split_on_silence
 Necessary Inputs:
 
 '''
-PATH_TO_AUDIO = "path/to/audio.wav"
+PATH_TO_AUDIO = "./audio_files/audio_test_7s.wav"
 PATH_TO_MODEL = './trained_models/model_CoughDetect_2Conv_210220.h5'
 
 #%%
@@ -46,9 +46,6 @@ def isolate_events(loadpath, min_silence_len = 500, silence_thresh = -35):
     events : list of arrays representing each audio event
     '''
     
-    print('Processing audio...')
-    
-    time.sleep(1)
     # RAW AUDIO SHOULD BE MONO WAV AT 22050 Hz !!!!!!!!!!!!!!!!
     raw_audio = AudioSegment.from_wav(loadpath)
     
@@ -125,8 +122,7 @@ def make_prediction(path_to_model, mfccs):
             outcomes.append(0)
         else:
             outcomes.append(1)
-    print(predictions)
-    
+        
     return outcomes
   
 #%%
@@ -183,6 +179,10 @@ def present_results(events, outcomes):
 def main():
     
     # Isolate audio events from input audio:
+    print('Processing audio...')
+    print()
+    time.sleep(.2)
+
     EVENTS = isolate_events(PATH_TO_AUDIO)
     
     print(f'Identified {len(EVENTS)} audio events.')
@@ -193,13 +193,13 @@ def main():
     MFCCS = get_mfcc_features(EVENTS)
     print('Extracting features...')
     print()
-    time.sleep(0.5)
+    time.sleep(0.2)
     
     # Make predictions for each event:
     OUTCOMES = make_prediction(PATH_TO_MODEL, MFCCS)
     print('Analyzing audio events...')
     print()
-    time.sleep(1.2)
+    time.sleep(0.5)
     
     # Present findings:
     present_results(EVENTS, OUTCOMES)    
