@@ -22,7 +22,7 @@ The model is trained on the available data, in order to be able to differentiate
 
 ## Results
 
-Training results have been giving a validation accuracy of 98% percent, and thus far, testing using unknown audio has yielded an accuracy of 92%. As more data becomes available for use, the model, and these statistics are updated.
+Training results have been giving a validation accuracy of 98% percent and F1 score at 0.93 , and thus far, testing using unknown audio has yielded an accuracy of 92% / F1 of 0.91. As more data becomes available for use, the model, and these statistics are updated.
 
 ## Contents
 
