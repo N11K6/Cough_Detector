@@ -14,7 +14,7 @@ For each audio file, the singular audio events are isolated by considering a min
 
 The features extracted from each file are its MFCCs, which offer a compact container of information on the content of the sound, especially if it is human activity-related, and have been a consistent choice for input when training neural networks.
 
-The architecture of the neural network consists of two main 2D Convolutional stages, followed by a fully connected stage that connects to the 2-neuron output layer, corresponding to the two classes (positive or negative).
+The architecture of the neural network consists of two main 2D Convolutional stages, followed by a fully connected stage that leads to the 2-neuron output layer, corresponding to the two classes (positive or negative).
 
 ![alt text](https://github.com/N11K6/Cough_Detector/blob/main/images/model_schematic.png?raw=true)
 
